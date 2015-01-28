@@ -1,0 +1,10 @@
+[09-Aug-2013 21:08:26] PHP Fatal error:  Call to undefined function  get_header() in /home2/bbginteg/public_html/wordpress/wp-content/themes/bbgTheme/index.php on line 1
+[09-Nov-2013 08:03:00] PHP Fatal error:  Call to undefined function  get_header() in /home2/bbginteg/public_html/wordpress/wp-content/themes/bbgTheme/index.php on line 1
+[12-Dec-2014 10:58:50 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home2/bbginteg/public_html/wordpress/wp-content/themes/bbgTheme/index.php on line 1
+[12-Dec-2014 10:58:51 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home2/bbginteg/public_html/wordpress/wp-content/themes/bbgTheme/index.php on line 1
+[12-Dec-2014 10:58:52 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home2/bbginteg/public_html/wordpress/wp-content/themes/bbgTheme/index.php on line 1
+[12-Dec-2014 10:58:53 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home2/bbginteg/public_html/wordpress/wp-content/themes/bbgTheme/index.php on line 1
+[12-Dec-2014 10:59:01 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home2/bbginteg/public_html/wordpress/wp-content/themes/bbgTheme/index.php on line 1
+[12-Dec-2014 10:59:02 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home2/bbginteg/public_html/wordpress/wp-content/themes/bbgTheme/index.php on line 1
+[12-Dec-2014 10:59:03 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home2/bbginteg/public_html/wordpress/wp-content/themes/bbgTheme/index.php on line 1
+[12-Dec-2014 10:59:04 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home2/bbginteg/public_html/wordpress/wp-content/themes/bbgTheme/index.php on line 1

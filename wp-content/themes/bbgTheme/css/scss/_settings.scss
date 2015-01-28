@@ -1,0 +1,79 @@
+/* Mixins
+======================================================================================================= */
+
+@mixin ul-reset {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+@mixin body-font {
+	font-family: 'Lato', sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+@mixin heading-font {
+	font-family: 'Lato', sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+@function rem-calc($size) {
+	$remSize: $size / 16px;
+	@return #{$remSize}rem;
+}
+@mixin font-size($size, $line: $size * 1.4) {
+	font-size: $size; //Fallback in px
+	font-size: rem-calc($size);
+	line-height: $line; //Fallback in px
+	line-height: rem-calc($line);
+}
+@mixin padding($size) {
+	padding: $size; //Fallback in px
+	padding: rem-calc($size);
+}
+@mixin margin($size) {
+	margin: $size; //Fallback in px
+	margin: rem-calc($size);
+}
+@mixin container {
+	width: 100%;
+	float: left;
+}
+
+@mixin box-sizing($size) {
+	box-sizing: $size; -moz-box-sizing: $size; -webkit-box-sizing: $size;
+}
+
+@mixin transition($delay, $speed, $ease) {
+	transition-delay: $delay + s; -moz-transition-delay: $delay + s; -webkit-transition-delay: $delay + s;
+	transition-duration: $speed + s; -moz-transition-duration: $speed + s; -webkit-transition-duration: $speed + s;
+	transition-timing-function: $ease; -moz-transition-timing-function: $ease; -webkit-transition-timing-function: $ease;
+
+}
+
+// Baseline, measured in pixels
+// The value should be the same as the font-size value for the html element
+// If the html element's font-size is set to 62.5% (of the browser's default font-size of 16px),
+// then the variable below would be 10px.
+$baseline-px: 16px;
+
+@mixin rem($property, $px-values) {
+	// Convert the baseline into rems
+	$baseline-rem: $baseline-px / 1rem;
+	// Print the first line in pixel values
+	#{$property}: $px-values;
+	// If there is only one (numeric) value, return the property/value line for it.
+	@if type-of($px-values) == "number" {
+		#{$property}: $px-values / $baseline-rem; }
+	@else {
+		// Create an empty list that we can dump values into
+		$rem-values: unquote("");
+		@each $value in $px-values {
+			// If the value is zero or a string or a color, return unchanged input
+			@if $value == 0 or type-of($value) == "string" or type-of($value) == "color" {
+				$rem-values: append($rem-values, $value); }
+			@else {
+				$rem-values: append($rem-values, $value / $baseline-rem); } }
+		// Return the property and its list of converted values
+		#{$property}: $rem-values; } }
