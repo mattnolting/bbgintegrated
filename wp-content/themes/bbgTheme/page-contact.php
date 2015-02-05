@@ -16,7 +16,9 @@ get_header(); ?>
 
 <article id="content">
 	<div class="contact-header">
-		<div class="logo"><a href="http://bbgintegrated.com/wordpress/"><img src="<?php bloginfo('template_directory'); ?>/images/contact-logo.png" /></a></div>
+		<div class="logo" style="width: 190px;"><a href="http://bbgintegrated.com/wordpress/">
+			<img style="max-width: 100%; height: auto;" src="<?php echo ot_get_option( 'contact_page_logo' ); ?>" alt="<?php echo get_bloginfo('name'); ?>" />
+		</a></div>
 	</div>
 <?php the_post(); ?>
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

@@ -32,7 +32,7 @@
 
 <div id="wrapper" class="hfeed shadow">
 
-<header>
+<header style="position: relative;">
 
 
 
@@ -57,7 +57,9 @@
 	    <?php endif; wp_reset_query(); ?>
     </div>
 
-    <div id="logo"><a href="http://bbgintegrated.com/wordpress/"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png" /></a></div>
+    <div id="logo" style="width: 180px; height: auto; top: 160px; left: 30px;"><a href="http://bbgintegrated.com/wordpress/">
+		    <img style="max-width: 100%; height: auto;" src="<?php echo ot_get_option( 'homepage_slider_logo' ); ?>" alt="<?php echo get_bloginfo('name'); ?>" />
+    </a></div>
 
     <nav>
 
